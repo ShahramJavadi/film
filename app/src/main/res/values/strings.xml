@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Film</string>
+    <string name="movie">سینمایی</string>
+    <string name="serial">سریال</string>
+    <string name="error_in_fetching_data">خطا در دریافت اطلاعات</string>
 </resources>

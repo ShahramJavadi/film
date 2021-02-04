@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_navigation"
+    app:startDestination="@id/contentFragment">
+
+    <fragment
+        android:id="@+id/contentFragment"
+        android:name="hsj.shahram.film.ui.ContentFragment"
+        android:label="ContentFragment" >
+        <action
+            android:id="@+id/action_contentFragment_to_contentDetailFragment"
+            app:destination="@id/contentDetailFragment" />
+        <action
+            android:id="@+id/action_contentFragment_to_favoriteContentFragment"
+            app:destination="@id/favoriteContentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contentDetailFragment"
+        android:name="hsj.shahram.film.ui.ContentDetailFragment"
+        android:label="ContentDetailFragment" >
+        <argument
+            android:name="contentItem"
+            app:argType="hsj.shahram.film.data.model.ResponseObject$ContentList" />
+        <action
+            android:id="@+id/action_contentDetailFragment_to_contentFragment"
+            app:destination="@id/contentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteContentFragment"
+        android:name="hsj.shahram.film.ui.FavoriteContentFragment"
+        android:label="FavoriteContentFragment" >
+        <action
+            android:id="@+id/action_favoriteContentFragment_to_contentDetailFragment"
+            app:destination="@id/contentDetailFragment" />
+    </fragment>
+</navigation>
